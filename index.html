@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <div id="shopping-list">
+  <div id="to-do-list">
     <div class="header">
       <h1>{{ header || 'Welcome' }}</h1>
       <button v-if="!editing" @click="doEdit(true)" class="btn btn-primry">Добавить заметку</button>
@@ -48,7 +48,7 @@
   </div>
   <script src="https://unpkg.com/vue@3"></script>
   <script>
-    const shoppingListApp = Vue.createApp({
+    const todoListApp = Vue.createApp({
       data() {
         return {
           header: 'Список дел',
@@ -86,7 +86,7 @@
           item.purchased = !item.purchased
         }
       }
-    }).mount('#shopping-list')
+    }).mount('#to-do-list')
   </script>
 </body>
 
